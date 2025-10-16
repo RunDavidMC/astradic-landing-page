@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+/* Background and text colors for alternating sections */
+.bluesec {
+    background-color: #A2EEFD; /* Light Blue */
+    color: white;
+}
+
+.whitesec {
+    background-color: white;
+    color: #A2EEFD; /* Light Blue */
+}
+
+/* Center content with good margins */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#land-hero {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.lock {
+    height: 6rem;
+    width: auto;
+    margin-right: 0px;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.arrow {
+    height: 3rem;
+    width: auto;
+    clear: both;
+    display: block;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth; /* For smooth native scrolling */
+}
+
+.drops {
+    opacity: 0; /* Initially, elements are invisible */
+    position: relative;
+    transform: translateY(-50px); /* Start from above */
+    animation: dropDown 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Animation: Drop from the top */
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Starts above the view */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at original position */
+    }
+}
+
+/* Add slight delay for each text element */
+.drops:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.drops:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.drops:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.drops:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.slides {
+    opacity: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.left-slide {
+    transform: translateX(-50px);
+    text-align: right;
+}
+
+.right-slide {
+    transform: translateX(50px);
+    text-align: left;
+}
+
+.down-slide {
+    transform: translateY(-50px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.head-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.vert-line {
+    height: 6rem;
+    width: 5px;
+    background-color: white;
+    margin-left: 20px;;
+}
+
+.vert-lineb {
+    height: 6rem;
+    width: 5px;
+    background-color: #A2EEFD;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.right-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: flex-start;
+}
+
+.right-text h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+.sub {
+    line-height:0.95;
+}
